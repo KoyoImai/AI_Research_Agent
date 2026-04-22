@@ -247,3 +247,5 @@ mprg@spark-09ef:~$ claude
 これでClaude Codeの環境構築と起動の確認は完了です．
 今回はホームディレクトリ（`/home/mprg`）でClaude Codeを起動しているため，次ステップ以降ではプロジェクトディレクトリでClaude Codeを起動し直してから進めていきます．
 
+`/exit`と入力すれば起動中のClaude Codeを終了できます．
+
