@@ -1,7 +1,7 @@
-# ステップ1：
+## ステップ1：
 ステップ1では，Claude Codeの環境構築とセットアップを行います．
 
-## Node.jsのインストール
+### Node.jsのインストール
 以下のコマンドを実行して`Node.js`をインストールします．
 ```
 # nvmをダウンロードしてインストール
@@ -18,18 +18,18 @@ node --version
 npm --version
 ```
 
-## Claude Code CLIのインストール
+### Claude Code CLIのインストール
 
 ```
 npm install -g @anthropic-ai/claude-code
 ```
 
-## tmuxセッションの作成
+### tmuxセッションの作成
 ```
 tmux new -s research-agent
 ```
 
-## Claude Codeの起動
+### Claude Codeの起動
 ここから，Claude Codeを起動して認証を行います．
 ```
 claude
