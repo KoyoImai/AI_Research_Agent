@@ -112,4 +112,6 @@ Welcome to Claude Code v2.1.117
                                      
    3. 3rd-party platform · Amazon Bedrock, Microsoft Foundry, or Vertex AI
 ```
-
+上記画面では，アカウントの種類の選択を求められています．
+今回の環境構築では，Claude CodeのProプラン以上に加入している人を対象としているので，`1. Claude account with subscription · Pro, Max, Team, or Enterprise`を選択してください．
+`2. Anthropic Console account · API usage billing`を選択すると，API課金を追加されるので気をつけてください．
