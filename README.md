@@ -9,6 +9,7 @@
 
 ## ステップ2:Claude Codeの動作確認
 ステップ2では，MCPサーバーの導入を含めたClaude Codeの動作確認を行います．
+あくまで動作確認ですので，まだAI Agentの稼働には進みません．
 
 ### プロジェクトディレクトリの作成とclaudeの起動
 ステップ1ではホームディレクトリでClaude Codeを起動していたため，新しくプロジェクトディレクトリの作成から行なっていきます．
@@ -128,3 +129,7 @@ This repository is currently empty. Update this file once the project is initial
 - Any project-specific conventions or constraints
 mprg@spark-09ef:~/research/project1$ 
 ```
+
+
+
+
