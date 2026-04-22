@@ -110,4 +110,21 @@ mprg@spark-09ef:~/research/project1$ claude
 
  Esc to cancel
 ```
+これで，CLAUDE.mdの初期ファイルが作成されました．
+まだ，CLAUDE.mdの設定を行っていないので内容は初期状態です．
+Claude Codeを`/exit`で終了して，CLAUDE.mdの内容を確認してみます．
+```
+mprg@spark-09ef:~/research/project1$ ls
+CLAUDE.md
+mprg@spark-09ef:~/research/project1$ cat CLAUDE.md 
+# CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+This repository is currently empty. Update this file once the project is initialized with:
+
+- Build, lint, and test commands
+- High-level architecture overview
+- Any project-specific conventions or constraints
+mprg@spark-09ef:~/research/project1$ 
+```
