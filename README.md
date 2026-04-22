@@ -131,5 +131,13 @@ mprg@spark-09ef:~/research/project1$
 ```
 
 
+### Dockerコンテナの作成
+ここでは，Dockerコンテナの作成を行います．
+自分でDockerfileを作成し，Dockerコンテナを立ててもいいですが，ここではClaude Codeの動作確認も兼ねてClaude CodeにDockerコンテナの作成をさせます．
+まず，以下のコマンドでClaude Codeを起動してください．
+```
+claude
+```
+
 
 
