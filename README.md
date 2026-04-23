@@ -17,7 +17,8 @@
 
 ### CLAUDE.mdの設計
 
-**[参考1：効果的なCLAUDE.mdの書き方](https://zenn.dev/farstep/articles/how-to-write-a-great-claude-md)**
+**[参考1：Claude Code Docs（Claude があなたのプロジェクトを記憶する方法）](https://code.claude.com/docs/ja/memory)**
+**[参考2：効果的なCLAUDE.mdの書き方](https://zenn.dev/farstep/articles/how-to-write-a-great-claude-md)**
 
 CLAUDE.mdは，Agentへの指示書のようなものです．
 Claude Codeは，セッション開始時にCLAUDE.mdを自動的に読み込んで，記述された内容を会話のコンテキストに含めます．
