@@ -17,7 +17,7 @@
 
 ### CLAUDE.mdの設計
 
-**[参考1：Claude Code Docs（Claude があなたのプロジェクトを記憶する方法）](https://code.claude.com/docs/ja/memory)**
+**[参考1：Claude Code Docs（Claude があなたのプロジェクトを記憶する方法）](https://code.claude.com/docs/ja/memory)** \
 **[参考2：効果的なCLAUDE.mdの書き方](https://zenn.dev/farstep/articles/how-to-write-a-great-claude-md)**
 
 CLAUDE.mdは，Agentへの指示書のようなものです．
