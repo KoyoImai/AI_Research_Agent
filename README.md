@@ -173,6 +173,40 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
    - 次の問いを複数提案する
 ```
 
+### ABN論文での検証実験
+実際にABNの論文pdfをAgentに渡して検証実験を行います．
+まず，`/home/mprg/research/project1/papers`にABNの論文pdfを配置します．
+ABNのpdfを配置したら，Claude Codeのチャット画面で`/implement papers/abn.pdf`を実行してください．
+以下のような画面になると思います．
+```
+mprg@spark-09ef:~/research/project1$ claude
+ ▐▛███▜▌   Claude Code v2.1.118
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /implement papers/abn.pdf                                                                                                       
+                            
+● 論文PDFを読んで内容を把握します。                                                                                               
+                                                                                                                                
+  Read 1 file (ctrl+o to expand)                                                                                                  
+                   
+● 論文の内容を把握しました。まず既存のディレクトリ構造を確認します。                                                              
+                                                                                                                                
+● Searching for 1 pattern, listing 2 directories… (ctrl+o to expand)                                                              
+  ⎿  $ ls /home/mprg/research/project1/experiments/ && ls /home/mprg/research/project1/papers/                                    
+                                                                                                                                  
+✢ Scampering… (43s · ↓ 1.1k tokens · thinking more)                                                                               
+                                                                                                                                  
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯                                                                                                                                 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  esc to interrupt   
+```
+
+
+
 
 
 
