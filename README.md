@@ -135,8 +135,34 @@ mprg@spark-09ef:~/research/project1$
 ここでは，Dockerコンテナの作成を行います．
 自分でDockerfileを作成し，Dockerコンテナを立ててもいいですが，ここではClaude Codeの動作確認も兼ねてClaude CodeにDockerコンテナの作成をさせます．
 まず，以下のコマンドでClaude Codeを起動してください．
+通常は，`Enter`を押すと入力が完了してしまいます．
+改行するには`\（バックスラッシュ）`を入力してから`Enter`を押してください．
 ```
 claude
+```
+claudeを起動したら，以下の内容を書き込んでください．
+```
+mprg@spark-09ef:~/research/project1$ claude
+ ▐▛███▜▌   Claude Code v2.1.118                                                                                                                            
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro                                                                                                                         
+  ▘▘ ▝▝    ~/research/project1                                                                                                                             
+                                                                                                                                                           
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 以下の要件でDockerfileを作成し，イメージのビルドとコンテナの起動まで行なってください．                                                 
+                                                                                                                                                    
+  [Dockerfileの要件]                                                                                                                               
+  - ベースイメージ：nvcr.io/nvidia/pytorch:25.03-py3                                                                                                       
+  - 作業ディレクトリ：/workspace                                                                                                                 
+  - 追加ライブラリ：transformers, datasets, accelerate, wandb, jupyterlab, matplotlib, seaborn, hydra-core                                               
+  - CMD：sleep infinity                                                                                                                                    
+                                                                                                                                                           
+  [コンテナの起動要件]                                                                                                                             
+  - コンテナ名：research-dev                                                                                                                       
+  - GPUを全て使用                                                                                                                                    
+  - ~/research をコンテナの /workspace にマウント                                                                                                          
+  - 常時起動                                                                                                                                       
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
 ```
 
 
