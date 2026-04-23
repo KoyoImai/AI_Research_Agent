@@ -9,7 +9,7 @@
 
 ## [ステップ2：Claude Codeの動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step2)
 
-## ステップ3：Agentの構築
+## ステップ3：シンプルなAgentの構築と動作確認
 ステップ3では，実際にAgentを構築していきます．
 ただし，ここで作成するAI Agentは，ある程度ユーザーとのやりとりを行いながら，実装や実験，改善を進めていくものであり，研究ループを自動で回すようなAI Agentではありません．
 また，ここからはVS CodeからDGX Sparkにssh接続して作業を進めていきます．
@@ -177,7 +177,7 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
 実際にABNの論文pdfをAgentに渡して検証実験を行います．
 まず，`/home/mprg/research/project1/papers`にABNの論文pdfを配置します．
 ABNのpdfを配置したら，Claude Codeのチャット画面で`/implement papers/abn.pdf`を実行してください．
-以下のような画面になると思います．
+以下のような画面になると思います（これは処理途中の画面です）．
 ```
 mprg@spark-09ef:~/research/project1$ claude
  ▐▛███▜▌   Claude Code v2.1.118
@@ -204,7 +204,132 @@ mprg@spark-09ef:~/research/project1$ claude
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
   esc to interrupt   
 ```
+処理が終わると`/home/mprg/research/project1/experiments/exp_001/design.md`が作成されます．
+`design.md`には，Agentが論文を読んで考えた事件設計が書かれています．
+以下に，今回作成された`design.md`を示します．
+```
+# exp_001: ABN ベースライン実装・動作確認（CIFAR-10）
 
+**ステータス**: 承認待ち  
+**作成日**: 2026-04-23
+
+---
+
+## 目的
+
+Attention Branch Network（ABN）を ResNet ベースで CIFAR-10 に実装し，
+論文結果（ResNet baseline 6.43% → ABN 4.91% top-1 error）を再現する．
+
+---
+
+## 手法概要
+
+### ネットワーク構造
+
+```
+Input (3×32×32)
+    │
+    ▼
+Feature Extractor
+  ├─ Conv(3,16,3×3) + BN + ReLU
+  ├─ Layer1: 5×残差ブロック (16ch, stride=1) → 16×32×32
+  └─ Layer2: 5×残差ブロック (32ch, stride=2) → 32×16×16
+    │
+    ├──────────────────────────┐
+    ▼                          ▼
+Attention Branch           Perception Branch
+  Layer3_att                 attention適用: (1+M(x))·g(x)
+  (5×残差ブロック,            Layer3_per
+   64ch, stride=1)            (5×残差ブロック,64ch,stride=2)
+    │                          │
+    ├─ 10×1×1 Conv             GAP → FC(64,10)
+    │   GAP → Softmax          │
+    │   → L_att (CE loss)      → L_per (CE loss)
+    │
+    └─ 1×1×1 Conv → Sigmoid
+        → M(x) (16×16 attention map)
+```
+
+**分岐点**: Layer2 出力（32ch, 16×16）  
+**Attention Mechanism**: Eq.2 `g'(x) = (1 + M(x)) · g(x)`（論文推奨）
+
+### モデルサイズの目安
+
+| コンポーネント | パラメータ数 (概算) |
+|--------------|-------------------|
+| Feature Extractor | ~86K |
+| Attention Branch | ~120K |
+| Perception Branch | ~120K |
+| **合計** | **~326K** |
+
+---
+
+## データセット
+
+- **CIFAR-10**: 10クラス, 60,000枚（訓練50,000 / テスト10,000）, 32×32px
+- データ拡張:
+  - zero-padding 4px → ランダムクロップ 32×32
+  - ランダム水平反転
+  - 正規化: mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.2010)
+
+---
+
+## 学習設定
+
+| 項目 | 設定値 |
+|------|-------|
+| Optimizer | SGD (momentum=0.9, weight_decay=1e-4) |
+| 初期学習率 | 0.1 |
+| LR スケジュール | epoch 150 で ×0.1，epoch 225 で ×0.1 |
+| エポック数 | 300 |
+| バッチサイズ | 128 |
+| 損失関数 | CrossEntropy (attention) + CrossEntropy (perception) |
+
+---
+
+## 評価指標
+
+- Top-1 Accuracy（メイン指標）
+- Attention Map の可視化（定性評価）
+- 学習曲線（train loss, val loss, val acc）
+
+---
+
+## 期待される結果
+
+| モデル | Top-1 Error（論文値） | Top-1 Accuracy |
+|--------|----------------------|----------------|
+| ResNet-32 baseline | ~7.5% | ~92.5% |
+| ResNet-32 + ABN | ~6.5〜7.0%（推定） | ~93.0〜93.5% |
+
+※論文は ResNet-110 を使用（error 6.43%→4.91%）．本実験では ResNet-32 を使用するため，  
+　絶対値は異なるが相対的な改善（0.5〜1.5%程度）を確認することが目標．
+
+---
+
+## 出力・保存物
+
+```
+experiments/exp_001/
+├── design.md           # 本ファイル
+├── run.py              # 実験コード
+└── results/
+    ├── log.json        # epoch毎の loss/acc
+    ├── best_model.pth  # 最良モデル重み
+    ├── attention_maps/ # アテンションマップ可視化
+    └── learning_curve.png
+```
+
+---
+
+## 承認チェックリスト
+
+- [ ] ネットワーク構造に問題ないか
+- [ ] 学習設定に問題ないか
+- [ ] 期待結果の認識が合っているか
+- [ ] その他変更・要望があれば記載
+
+```
 
 
 
