@@ -309,7 +309,6 @@ Attention Branch           Perception Branch
 
 ## 出力・保存物
 
-```
 experiments/exp_001/
 ├── design.md           # 本ファイル
 ├── run.py              # 実験コード
@@ -318,7 +317,6 @@ experiments/exp_001/
     ├── best_model.pth  # 最良モデル重み
     ├── attention_maps/ # アテンションマップ可視化
     └── learning_curve.png
-```
 
 ---
 
