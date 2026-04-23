@@ -7,7 +7,7 @@
 
 ## [ステップ1：Claude Codeの環境構築](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step1)
 
-## ステップ2:Claude Codeの動作確認
+## ステップ2：Claude Codeの動作確認
 ステップ2では，MCPサーバーの導入を含めたClaude Codeの動作確認を行います．
 あくまで動作確認ですので，まだAI Agentの稼働には進みません．
 
