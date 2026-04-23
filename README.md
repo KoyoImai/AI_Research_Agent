@@ -213,8 +213,9 @@ Claude Codeに以下の内容のプロンプトを入力して実行してみて
 
 
 ### MCPサーバーの導入
-**[参考：ひとつやるだけでも大違い - Claude Code 設定チートシート、書いたよー](https://note.com/okdt/n/n655c4ee10e89)**  ¥
-**[参考：Claude Codeにコマンド一発でMCPサーバを簡単設定](https://zenn.dev/karaage0703/articles/3bd2957807f311)** ¥
+**[参考：ひとつやるだけでも大違い - Claude Code 設定チートシート、書いたよー](https://note.com/okdt/n/n655c4ee10e89)** \
+**[参考：Claude Codeにコマンド一発でMCPサーバを簡単設定](https://zenn.dev/karaage0703/articles/3bd2957807f311)** \
+
 MCP（Model Context Protocol）とは，Claude Codeが外部ツールを使用するための仕組みです．
 デフォルトのClaude Codeは，ターミナルコマンドによるファイルの読み込みや書き込みはできますが，arXivによる論文の検索，git操作などはできません．
 そこで，MCPを用いることでClaude Codeの機能を拡張します．
