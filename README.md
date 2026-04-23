@@ -9,4 +9,6 @@
 
 ## [ステップ2：Claude Codeの動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step2)
 
-## ステップ3：未定
+## ステップ3：Agentの構築
+### CLAUDE.mdの設計
+
