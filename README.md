@@ -210,3 +210,34 @@ Claude Codeに以下の内容のプロンプトを入力して実行してみて
      
 ```
 
+
+### MCPサーバーの導入
+**[参考](https://note.com/okdt/n/n655c4ee10e89)** 
+
+MCP（Model Context Protocol）とは，Claude Codeが外部ツールを使用するための仕組みです．
+デフォルトのClaude Codeは，ターミナルコマンドによるファイルの読み込みや書き込みはできますが，arXivによる論文の検索，git操作などはできません．
+そこで，MCPを用いることでClaude Codeの機能を拡張します．
+
+今回は，MCPサーバーを実際に導入することを目的としているので，AI Agentに必要な全てのMCPは導入はせず，MCPの導入手順を確かめていきます．
+まず，以下のコマンドで現在のMCPの設定状況を確認します．
+```
+/mcp
+```
+実行すると，以下のような画面が表示されると思います．
+```
+❯ /mcp                                                                                                                                                     
+                                                                                                                                                           
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Manage MCP servers                                                                                                                                       
+  3 servers                                                                                                                                                
+                                                                                                                                                           
+    claude.ai                                                                                                                                              
+  ❯ claude.ai Gmail · △ needs authentication                                                                                                               
+    claude.ai Google Calendar · △ needs authentication                                                                                                     
+    claude.ai Google Drive · △ needs authentication
+
+  https://code.claude.com/docs/en/mcp for help
+ ↑↓ to navigate · Enter to confirm · Esc to cancel
+```
+
+
