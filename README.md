@@ -9,11 +9,11 @@
 
 ## ステップ2：Claude Codeの動作確認
 ステップ2では，MCPサーバーの導入を含めたClaude Codeの動作確認を行います．
-あくまで動作確認ですので，まだAI Agentの稼働には進みません．
+あくまで動作確認ですので，まだ本格的なAI Agentの構築・稼働には進みません．
 
 ### プロジェクトディレクトリの作成とclaudeの起動
 ステップ1ではホームディレクトリでClaude Codeを起動していたため，新しくプロジェクトディレクトリの作成から行なっていきます．
-今回は，`~/research/project1`をプロジェクトディレクトリとします．
+今回は，`~/research/project1`をプロジェクトディレクトリとし，Claude Codeによる作業などは，このディレクトリ上で行うようにします．
 ```
 mkdir -p ~/research/project1
 cd ~/research/project1/
@@ -74,6 +74,8 @@ mprg@spark-09ef:~/research/project1$ claude
 ```
 続いて，以下のような画面が現れます．
 ここでも，`2. Yes, allow all edits during this session (shift+tab)`を選択します．
+以降も，Claude Codeがコマンドの実行許可を求めてくる場合が多くあります．
+その場合は，大体`2`を選択していきます．
 ```
 ❯ /init                                                                                                                                                    
 
@@ -162,8 +164,47 @@ mprg@spark-09ef:~/research/project1$ claude
   - ~/research をコンテナの /workspace にマウント                                                                                                          
   - 常時起動                                                                                                                                       
 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
 ```
 
+### ディレクトリ構成の整備
+今後AI Agentを導入して研究を進めていく上でのディレクトリ構成の整備を行います．
+以下のようなディレクトリ構成を，Claude Codeによって整備することにします．
+```
+~research/project1
+                |- papers
+                |- experiments
+                |- outputs/figures
+                |- outputs/notes.md
+                |- .claude/commands 
+```
+Claude Codeに以下の内容のプロンプトを入力して実行してみてください（↓は入力と結果の画面です）．
+```
+❯ 以下のディレクトリ構成を~/research/project1/内に作成してください．                                                                                       
+                                                                                                                                                           
+  - papers/        # 論文PDF置き場                                                                                                                         
+  - experiments/   # 実験管理                                                                                                                              
+  - outputs/figures/ # 可視化結果                                                                                                                          
+  - outputs/notes.md # 実験メモ                                                                                                                            
+  - .claude/commands/ # カスタムコマンド置き場                                                                                                             
 
+● Bash(mkdir -p /home/mprg/research/project1/papers \
+                 /home/mprg/research/project1/experiments \…)
+  ⎿  Done    
+
+  Searched for 1 pattern (ctrl+o to expand)  
+                                                                                           
+● 意図した通りの構成で作成できています。
+                                                                                                                                                           
+  ~/research/project1/
+  ├── papers/              # 論文PDF置き場                                                                                                                 
+  ├── experiments/         # 実験管理                                                                                                                    
+  ├── outputs/                                                                                                                                             
+  │   ├── figures/         # 可視化結果                                                                                                                  
+  │   └── notes.md         # 実験メモ
+  └── .claude/                                                                                                                                             
+      └── commands/        # カスタムコマンド置き場
+                                                                                                                                                           
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯       
+```
 
