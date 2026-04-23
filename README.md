@@ -10,7 +10,7 @@
 ## [ステップ2：Claude Codeの動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step2)
 
 ## ステップ3：シンプルなAgentの構築と動作確認
-ステップ3では，実際にAgentを構築していきます．
+ステップ3では，実際にAgentを構築し，Atention Branch Networkの再現と改善を行っていきます．
 ただし，ここで作成するAI Agentは，ある程度ユーザーとのやりとりを行いながら，実装や実験，改善を進めていくものであり，研究ループを自動で回すようなAI Agentではありません．
 また，ここからはVS CodeからDGX Sparkにssh接続して作業を進めていきます．
 そのため，改行の方法も変わっているかもしれません．
