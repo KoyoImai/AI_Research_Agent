@@ -59,9 +59,9 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
 
 ここでは，`/inplement`というカスタムスラッシュコマンドの作成を行います．
 カスタムスラッシュコマンドとは，Claude Codeが事前に備わっている`/init`や`/mcp`のようなコマンドではなく，ユーザーが独自で設定可能なコマンドのことです．
-`.clade/commands/implement.md`のようにファイルを配置することで，新しいコマンドを設定することができます．
+`.claude/commands/implement.md`のようにファイルを配置することで，新しいコマンドを設定することができます．
 今回設定する`/inplement`コマンドは，Agentが受け取ったpdfを元に実装を進めるための一連流れをコマンドへと落としこだものです．
-まずは，以下の内容を`.clade/commands/implement.md`に記述してください．
+まずは，以下の内容を`.claude/commands/implement.md`に記述してください．
 ```
 # /implement コマンド
 論文pdfを受け取り，再現実装・ベースライン実験までを自律的に実行する．
