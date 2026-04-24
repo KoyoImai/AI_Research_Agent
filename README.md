@@ -209,52 +209,54 @@ AGENTS.mdは，Codexのエージェントに向けたREADMEであり，ビルド
 ```
 # Repository Guidelines
 
-## Project Structure & Module Organization
-This repository hosts ABN research experiments rather than a reusable Python package. Keep work organized by experiment.
+## プロジェクト構成とモジュール配置
+このリポジトリは再利用可能な Python パッケージではなく、ABN の研究実験を管理するための作業領域です。作業は実験単位で整理してください。
 
-- `experiments/exp_NNN/`: experiment units with `design.md`, training scripts such as `run.py` or `optimize.py`, and a `results/` directory for logs, checkpoints, and figures.
-- `papers/`: source papers and reading notes, for example `abn.pdf` and `abn_summary.md`.
-- `outputs/`: cross-experiment notes and shared figures.
-- `Dockerfile`: container definition for the research environment.
-- `CLAUDE.md`: operating rules for agents working in this repository.
+- `experiments/exp_NNN/`: 実験ごとのディレクトリ。`design.md`、`run.py` や `optimize.py` などの実行スクリプト、ログ・チェックポイント・図を保存する `results/` を含みます。
+- `papers/`: 論文 PDF と読書メモ。例: `abn.pdf`, `abn_summary.md`
+- `outputs/`: 実験横断のメモや共通の図
+- `Dockerfile`: 研究用コンテナ定義
+- `CLAUDE.md`: このリポジトリで動くエージェント向け運用ルール
 
-Create new work under the next numbered directory, such as `experiments/exp_003/`.
+新しい作業は `experiments/exp_003/` のように、次の番号のディレクトリを作って追加します。
 
-## Build, Test, and Development Commands
-Use the long-running Docker container described in `CLAUDE.md`.
+## ビルド・テスト・開発コマンド
+実行は `CLAUDE.md` に記載の常駐 Docker コンテナを前提とします。
 
-- `docker exec research-dev python /workspace/project1/experiments/exp_001/run.py`: run a specific experiment.
-- `docker exec research-dev python /workspace/project1/experiments/exp_002/optimize.py`: run optimization or follow-up analysis.
-- `docker exec research-dev python -m py_compile /workspace/project1/experiments/exp_002/run.py`: quick syntax check before execution.
+- `docker exec research-dev python /workspace/project1/experiments/exp_001/run.py`: 特定実験を実行します。
+- `docker exec research-dev python /workspace/project1/experiments/exp_002/optimize.py`: 最適化や追加分析を実行します。
+- `docker exec research-dev python -m py_compile /workspace/project1/experiments/exp_002/run.py`: 実行前の簡易構文チェックです。
 
-Run commands from the container when possible so paths such as `/workspace/project1/...` resolve correctly.
+`/workspace/project1/...` のパスを正しく使うため、可能な限りコンテナ内でコマンドを実行してください。
 
-## Coding Style & Naming Conventions
-Follow the style used in existing experiment scripts.
+## コーディング規約と命名
+既存の実験スクリプトの書き方に合わせてください。
 
-- Python: 4-space indentation, snake_case for functions and variables, PascalCase for `nn.Module` classes.
-- Keep hyperparameters near the top of each script as uppercase constants.
-- Name experiments as `exp_NNN`; place outputs under that experiment’s own `results/`.
-- Prefer small, self-contained scripts over shared abstractions unless duplication becomes a clear maintenance problem.
+- Python は 4 スペースインデントを使います。
+- 関数名・変数名は `snake_case`、`nn.Module` のクラス名は `PascalCase` を使います。
+- ハイパーパラメータは各スクリプト冒頭に大文字定数でまとめます。
+- 実験名は `exp_NNN` 形式とし、生成物はその実験配下の `results/` に保存します。
+- 重複が明確な保守負債になるまでは、共有抽象化よりも自己完結した小さなスクリプトを優先します。
 
-## Testing Guidelines
-There is no dedicated test suite yet. Minimum validation for each change:
+## テスト方針
+専用のテストスイートはまだありません。変更時の最低限の確認は次のとおりです。
 
-- run `py_compile` on edited scripts;
-- execute the target experiment only after the corresponding `design.md` is written and approved;
-- record metrics, logs, and generated figures inside `experiments/exp_NNN/results/`.
+- 編集したスクリプトに対して `py_compile` を実行する
+- 対応する `design.md` を作成し、承認を得てから実験を実行する
+- 指標、ログ、生成した図を `experiments/exp_NNN/results/` に保存する
 
-If you add tests later, keep them lightweight and colocated with the experiment or in a new `tests/` directory.
+将来テストを追加する場合は、軽量なものを実験ディレクトリの近くか新設する `tests/` に配置してください。
 
-## Commit & Pull Request Guidelines
-Local Git history is not available in this workspace, so use a simple, consistent convention.
+## コミットとプルリクエスト
+このワークスペースでは Git 履歴を参照できないため、単純で一貫した規約を使ってください。
 
-- Commit messages: imperative and scoped, e.g. `exp_003: add CIFAR-100 ABN baseline`.
-- PRs should summarize the hypothesis, implementation changes, run commands, key metrics, and next steps.
-- Link the relevant `design.md` and include figures or logs when behavior changes are supported by experiment results.
+- コミットメッセージは命令形かつスコープ付きで書きます。例: `exp_003: add CIFAR-100 ABN baseline`
+- PR には仮説、実装変更、実行コマンド、主要指標、次のアクションを簡潔にまとめます。
+- 振る舞いの変化を実験結果で示す場合は、対応する `design.md`、図、ログを添付または参照します。
 
-## Agent-Specific Instructions
-Do not run a new experiment without user approval of `experiments/exp_NNN/design.md`. Prefer CIFAR-10 or CIFAR-100 for iteration, add paper summaries to `papers/`, and always propose follow-up questions or improvements when reporting results.
+## エージェント向け注意事項
+`experiments/exp_NNN/design.md` の承認なしに新しい実験を実行してはいけません。反復は CIFAR-10 または CIFAR-100 を優先し、新しく読んだ論文は `papers/` に要約を追加し、結果報告では必ず次の問いや改善案も提示してください。
+
 
 ```
 
