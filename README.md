@@ -256,8 +256,19 @@ AGENTS.mdは，Codexのエージェントに向けたREADMEであり，ビルド
 
 ## エージェント向け注意事項
 `experiments/exp_NNN/design.md` の承認なしに新しい実験を実行してはいけません。反復は CIFAR-10 または CIFAR-100 を優先し、新しく読んだ論文は `papers/` に要約を追加し、結果報告では必ず次の問いや改善案も提示してください。
-
-
 ```
+
+### Codex AgentとClaude Code Agentの視点補完
+Codex AgentとClaude Codeはそれぞれ，AGENTS.mdとCLAUDE.mdを参照しています．
+それらを自動で参照できるように違いの`.md`ファイルに以下の文章を追加してみます．
+```
+## 参照ファイル
+- AGENTS.md：コーディング規約・Dockerコマンド・Git規約を参照すること
+```
+```
+## 参照ファイル
+- CLAUDE.md：研究の行動原則・フェーズ・承認ゲートを参照すること
+```
+
 
 ## ステップ5：
