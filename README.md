@@ -10,6 +10,9 @@
 VS Codeの拡張機能にあるClaude CodeやCodexを使うのは可能なのか？
 ローカルpc（手元のmac book）でDGX Sparkにssh接続して，ローカルpcのVS CodeでClaude CodeとCodexを起動していると，ローカルpcを閉じたらAgentの稼働も止まるのでは？
 
+### 回答1
+一旦CLIで環境を構築し，VS Codeの拡張機能は後から確かめる．
+
 ### 
 
 ## [ステップ1：Claude Codeの環境構築](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step1)
