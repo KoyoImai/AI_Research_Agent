@@ -13,6 +13,12 @@ VS Codeの拡張機能にあるClaude CodeやCodexを使うのは可能なのか
 ### 回答1
 一旦CLIで環境を構築し，VS Codeの拡張機能は後から確かめる．
 
+### 疑問2
+gitやarXivなどの接続はどうする？
+
+### 回答2
+MCPサーバーを導入予定．
+
 ### 
 
 ## [ステップ1：Claude Codeの環境構築](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step1)
