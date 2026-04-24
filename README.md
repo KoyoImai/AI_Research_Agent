@@ -5,6 +5,8 @@
 
 ## 構成と環境
 
+**[参考1：Claude Code Orchestra: Claude Code × Codex CLI × Gemini CLIの最適解を探る](https://zenn.dev/mkj/articles/claude-code-orchestra_20260120)**
+
 ## 現状の疑問
 ### 疑問1
 VS Codeの拡張機能にあるClaude CodeやCodexを使うのは可能なのか？
