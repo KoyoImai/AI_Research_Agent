@@ -5,7 +5,9 @@
 
 ## 構成と環境
 
-**[参考1：Claude Code Orchestra: Claude Code × Codex CLI × Gemini CLIの最適解を探る](https://zenn.dev/mkj/articles/claude-code-orchestra_20260120)**
+**[参考1：Claude Code Docs](https://code.claude.com/docs/en/best-practices)** \
+**[参考2：Claude Code Orchestra: Claude Code × Codex CLI × Gemini CLIの最適解を探る](https://zenn.dev/mkj/articles/claude-code-orchestra_20260120)** \
+**[参考3：Claude × Codex × Gemini を"併用"する設計 ─ セカンドオピニオン運用フレーム](https://qiita.com/nogataka/items/b2b4a84ba611ccaf8447)**
 
 ## 現状の疑問
 ### 疑問1
