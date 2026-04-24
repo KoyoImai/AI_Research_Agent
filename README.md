@@ -22,5 +22,17 @@ VS Codeの拡張機能にあるClaude CodeやCodexを使うのは可能なのか
 ## [ステップ3：シンプルなAgentの構築と動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step3)
 
 ## ステップ4：Codex CLI のインストール・動作確認
+まず，Codex CLIのインストールを行います．
+以下のコマンドを，ターミナル上で実行してください．
+```
+npm i -g @openai/codex
+```
+インストールが完了したら，バージョン確認で以下を実行してください．
+```
+mprg@spark-09ef:~/research$ codex --version
+codex-cli 0.124.0
+```
+
+
 
 ## ステップ5：
