@@ -25,7 +25,7 @@ MCPサーバーを導入予定．
 
 ## [ステップ2：Claude Codeの動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step2)
 
-## [ステップ3：シンプルなAgentの構築と動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step3)
+## [ステップ3：シンプルなAgentの構築と動作確認（ABNで実行中）](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step3)
 
 ## ステップ4：Codex CLI のインストール・動作確認
 
