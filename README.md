@@ -40,7 +40,83 @@ codex-cli 0.124.0
 cd ~/research/project1
 codex
 ```
+codexを起動後，以下の画面が現れます．
+ChatGPT Plusに登録しているので，`1`を選択して先に進みます．
+```
+  Welcome to Codex, OpenAI's command-line coding agent
 
+  Sign in with ChatGPT to use Codex as part of your paid plan
+  or connect an API key for usage-based billing
 
+> 1. Sign in with ChatGPT
+     Usage included with Plus, Pro, Business, and Enterprise plans
+
+  2. Sign in with Device Code
+     Sign in from another device with a one-time code
+
+  3. Provide your own API key
+     Pay for what you use
+
+  Press Enter to continue
+```
+`1`を選択後，メールアドレスやパスワードを求められるので，自身のアカウントでログインしてください．
+ログインが完了するとターミナルに以下の画面が表示されます．
+ログインが完了したことを示す画面なので，そのまま`Enter`を押して先に進みます．
+```
+  Welcome to Codex, OpenAI's command-line coding agent
+
+✓ Signed in with your ChatGPT account
+
+  Before you start:
+
+  Decide how much autonomy you want to grant Codex
+  For more details see the Codex docs
+
+  Codex can make mistakes
+  Review the code it writes and commands it runs
+
+  Powered by your ChatGPT account
+  Uses your plan's rate limits and training data preferences
+
+  Press Enter to continue
+```
+その後，以下のような確認画面が出ます．
+`1`を選択して先に進みます．
+```
+  Welcome to Codex, OpenAI's command-line coding agent
+
+✓ Signed in with your ChatGPT account
+
+> You are in /home/mprg/research/project1
+
+  Do you trust the contents of this directory? Working with untrusted contents comes with higher risk of prompt injection.
+  Trusting the directory allows project-local config, hooks, and exec policies to load.
+
+› 1. Yes, continue
+  2. No, quit
+
+  Press enter to continue
+```
+これでCodexの起動が完了し，いかのような画面が表示されます．
+```
+⚠ Codex's Linux sandbox uses bubblewrap and needs access to create user namespaces.
+
+╭───────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.124.0)            │
+│                                       │
+│ model:     gpt-5.4   /model to change │
+│ directory: ~/research/project1        │
+╰───────────────────────────────────────╯
+
+  Tip: GPT-5.5 is now available in Codex. It's our strongest agentic coding model yet, built to reason through large codebases,
+  check assumptions with tools, and keep going until the work is done.
+
+  Learn more: https://openai.com/index/introducing-gpt-5-5/
+
+ 
+› Find and fix a bug in @filename
+ 
+  gpt-5.4 default · ~/research/project1
+```
 
 ## ステップ5：
