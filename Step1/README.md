@@ -243,5 +243,31 @@ mprg@spark-09ef:~$ claude
 これでClaude Codeの環境構築と起動の確認は完了です．
 今回はホームディレクトリ（`/home/mprg`）でClaude Codeを起動しているため，次ステップ以降ではプロジェクトディレクトリでClaude Codeを起動し直してから進めていきます．
 
+5月3日（日）17:57追記 \
 `/exit`と入力すれば起動中のClaude Codeを終了できます．
-
+Claude Codeのチャット欄に`/(任意のコマンド)`と入力すると，コマンドを実行できます．
+`/exit`であれば，起動中のClaude Codeを終了することができます．
+```
+mprg@spark-3894:~$ claude
+╭─── Claude Code v2.1.126 ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting started                                                                                │
+│                 Welcome back Imai!                 │ Run /init to create a CLAUDE.md file with instructions for Claude                                       │
+│                                                    │ Note: You have launched claude in your home directory. For the best experience, launch it in a project… │
+│                       ▐▛███▜▌                      │ ─────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│                      ▝▜█████▛▘                     │ What's new                                                                                              │
+│                        ▘▘ ▝▝                       │ The `/model` picker now lists models from your gateway's `/v1/models` endpoint when `ANTHROPIC_BASE_UR… │
+│ Sonnet 4.6 · Claude Pro · imaikoyo0314@gmail.com's │ - Added `claude project purge [path]` to delete all Claude Code state for a project (transcripts, task… │
+│  Organization                                      │ `--dangerously-skip-permissions` now bypasses prompts for writes to `.claude/`, `.git/`, `.vscode/`, s… │
+│                     /home/mprg                     │ /release-notes for more                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                          
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ /exit                                   
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+/exit                         Exit the CLI                                                                                                                      
+/extra-usage                  Configure extra usage to keep working when limits are hit                                                                 
+/context                      Visualize current context usage as a colored grid                                                                             
+/claude-api                   Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also        
+                              handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). …    
+/memory                       Edit Claude memory files    
+```
