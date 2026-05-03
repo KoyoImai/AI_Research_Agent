@@ -5,7 +5,7 @@
 そのため，改行の方法も変わっているかもしれません．
 チャットの入力が`option+Enter`で改行できます（ターミナルでもできたかもしれないですが，確かめていないです）．
 
-### CLAUDE.mdの設計
+### ステップ3.1：CLAUDE.mdの設計
 
 **[参考1：Claude Code Docs（Claude があなたのプロジェクトを記憶する方法）](https://code.claude.com/docs/ja/memory)** \
 **[参考2：効果的なCLAUDE.mdの書き方](https://zenn.dev/farstep/articles/how-to-write-a-great-claude-md)**
@@ -53,7 +53,7 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
 - .claude/commands/：カスタムスラッシュコマンド
 ```
 
-### `/inplement`コマンドの作成
+### ステップ3.2：`/inplement`コマンドの作成
 
 **[参考1：]()**
 
@@ -97,7 +97,7 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
 ```
 `.clade/commands/implement.md`の作成が完了したら，チャットで`implement`と打ち込んで，コマンドとして認識されているかを確認してください．
 
-### `/optimize`コマンドの作成
+### ステップ3.3：`/optimize`コマンドの作成
 `/inprement`コマンドと同様に，`/optimize`コマンドを作成します．
 以下の内容を`.clade/commands/optimize.md`に記述してください．
 ```
@@ -132,7 +132,7 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
 ```
 
 
-### `/improve`コマンドの作成
+### ステップ3.4：`/improve`コマンドの作成
 ```
 # /improve コマンド
 実装済みの手法に対して，著者が考えなかった改善案を提案・実装・実験する．
