@@ -162,7 +162,15 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
    - 次の問いを複数提案する
 ```
 
-### ABN論文での検証実験
+### 各コマンドの役割
+- `/implement $ARGUMENTS`
+論文PDFを渡して，読解 → 実験設計書（design.md）作成 → 承認待ち → 実装 → 実験実行 → 結果報告 までを自律的に進めます．
+- `/optimize $ARGUMENTS`
+実験ディレクトリを渡すと，学習率・重み減衰・バッチサイズなどのハイパーパラメータ探索を設計・実行します．
+- `/improve $ARGUMENTS`
+実験ディレクトリを渡すと，著者視点・外部視点の両方から改善案を提案・実装・実験します．
+
+### ステップ3.5：ABN論文での検証実験
 実際にABNの論文pdfをAgentに渡して検証実験を行います．
 まず，`/home/mprg/research/project1/papers`にABNの論文pdfを配置します．
 ABNのpdfを配置したら，Claude Codeのチャット画面で`/implement papers/abn.pdf`を実行してください．
