@@ -9,6 +9,8 @@ Claude Code CLI × Codex CLI で研究を進めるため，一度ABNのプロジ
 **[参考３：Claude Code のサブエージェント機能の基本的な使い方](https://zenn.dev/ino_h/articles/2025-09-10-claude-code-subagents-basics)** \
 **[参考４：Claude Codeの「サブエージェント」と「Agent Teams」は何が違うのか──設計レイヤで理解する使い分け](https://qiita.com/nogataka/items/df6c43496b2da9d41311)**
 
+![](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step5/images/Subagents%20vs%20Agent%20Teams.avif)
+
 ### サブエージェントとは
 サブエージェントとは，Claude Code内で動作する専門特化型のAIアシスタントです．
 親エージェント（メインセッション）がサブエージェントを起動し，タスク完了後に結果だけを受け取ります．
