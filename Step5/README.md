@@ -29,7 +29,6 @@ Agent Teamsとは，複数の独立したClaude Codeインスタンスをチー�
 
 
 ### Claude Code のサブエージェントと Agent Teamsの違い
-
 | 観点         | Subagents               | Agent Teams           |
 | ---------- | ----------------------- | --------------------- |
 | 実体         | 1つのClaude Code内の専門Agent | 複数のClaude Codeセッション   |
@@ -38,6 +37,14 @@ Agent Teamsとは，複数の独立したClaude Codeインスタンスをチー�
 | 調整         | main agentが管理           | shared task listで自己調整 |
 | 用途         | 調査・レビュー・局所作業            | 議論・並列探索・共同検証          |
 | token cost | 比較的低い                   | 高い                    |
+
+サブエージェントとAgent Teamsについて，
+```
+結果を報告する必要がある迅速で焦点を絞ったワーカーが必要な場合は subagents を使用してください。
+チームメンバーが調査結果を共有し、互いに検証し、独立して調整する必要がある場合は、エージェントチームを使用してください。
+```
+という内容がClaude Code Docsにあります．
+
 
 
 ## ステップ5.2：Claude Code サブエージェントの導入
