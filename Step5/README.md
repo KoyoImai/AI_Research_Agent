@@ -285,6 +285,11 @@ Claude Code CLIのチャット欄に以下を入力して実行してくださ�
                                                                                                                                   
    ↑↓ to navigate · Enter to select · Esc to go back 
 ```
+ここでは，サブエージェントのメモリの保存先を選択します．
+`1. Project scope (.claude/agent-memory/) (Recommended)`を選択します．
+これで，今回のプロジェクト内で実験の記録と管理がしやすくなります．
+次の画面に移ったら`s`を押してサブエージェントのファイルを保存してください．
+`project1/.claude/agents`にサブエージェントの設定が記述された`.md`ファイルが保存されていると思います．
 
 
 ## ステップ5.3：Claude Code Agent Teams の導入
