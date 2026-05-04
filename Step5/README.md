@@ -2,7 +2,7 @@
 Claude Code CLI × Codex CLI による研究環境を構築するため，サブエージェントなどについてまとめます．
 Claude Code CLI × Codex CLI で研究を進めるため，一度ABNのプロジェクトをバックアップだけとって削除しました．
 
-## ステップ5.1：Claude Code サブエージェントと Agent Teams
+## ステップ5.1：Claude Code サブエージェントと Agent Teams について
 
 **[参考１：Claude Code Docs of Sub Agent](https://code.claude.com/docs/ja/sub-agents)** \
 **[参考２：Claude Code Docs of Agent Teams](https://code.claude.com/docs/ja/agent-teams)** \
@@ -24,6 +24,14 @@ Claude Code CLI × Codex CLI で研究を進めるため，一度ABNのプロジ
 ### Agent Teams とは
 Agent Teamsとは，複数の独立したClaude Codeインスタンスをチームとして協調動作させる仕組みです．
 
+
+
+
+## ステップ5.2：Claude Code サブエージェントの導入
+
+
+
+## ステップ5.2：Claude Code Agent Teams の導入
 
 
 
