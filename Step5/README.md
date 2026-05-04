@@ -23,8 +23,21 @@ Claude Code CLI × Codex CLI で研究を進めるため，一度ABNのプロジ
 
 ### Agent Teams とは
 Agent Teamsとは，複数の独立したClaude Codeインスタンスをチームとして協調動作させる仕組みです．
+1つのCluade Codeがチームリーダーとなり，複数のチームメイトにタスクを割り当て，共有タスクリスト，進捗管理などを通じて協調させます．
+各チームメイトは，独立したClaude Codeセッションとして働き，それぞれが独自のコンテキストウィンドウを持ちます．
+さらに，チームメイト同士がチームリーダーを介さずにメッセージを送り合うことができます．
 
 
+### Claude Code のサブエージェントと Agent Teamsの違い
+
+| 観点         | Subagents               | Agent Teams           |
+| ---------- | ----------------------- | --------------------- |
+| 実体         | 1つのClaude Code内の専門Agent | 複数のClaude Codeセッション   |
+| context    | 独立contextだが結果はmainへ返す   | 各teammateが完全に独立       |
+| 通信         | 基本的にmain agentへ報告       | teammate同士が直接通信       |
+| 調整         | main agentが管理           | shared task listで自己調整 |
+| 用途         | 調査・レビュー・局所作業            | 議論・並列探索・共同検証          |
+| token cost | 比較的低い                   | 高い                    |
 
 
 ## ステップ5.2：Claude Code サブエージェントの導入
