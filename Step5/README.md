@@ -48,11 +48,15 @@ Agent Teamsとは，複数の独立したClaude Codeインスタンスをチー�
 
 最終的には，Agent Teamsの複数のチームメイトが，それぞれ内部でサブエージェントを起動するみたいな構成になるのかなと考えています．
 
+
+
 ## ステップ5.2：Claude Code サブエージェントの導入
+ここからは実際にClaude Codeでサブエージェントを導入して動作確認を行います．
 
 
 
-## ステップ5.2：Claude Code Agent Teams の導入
+
+## ステップ5.3：Claude Code Agent Teams の導入
 
 
 
