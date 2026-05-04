@@ -298,6 +298,56 @@ Claude Code CLIのチャット欄に以下を入力して実行してくださ�
 今回生成された`implementer.md`はこの[githubディレクトリ](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step5/implementer.md?plain=1)に置いておきます．
 
 
+### analyzerエージェント
+続いて，analyzerエージェントの作成に進みます．
+implementerエージェントと同様にまず以下を実行してください．
+```
+/agents
+```
+実行したら，以下の画面が出るので，`Library`タブの`Create new agent`を選択して`Enter`を押してください．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /clear                                                                                                                                                                        
+  ⎿  (no content)  
+                                                                                                                          
+❯ /agents                                                                                                                                                                       
+                                                                                                                                                                                
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Agents  Running   Library                                                                                                                                                     
+
+  ❯ Create new agent                                                                                                                                                            
+                                                                                                                                                                                
+    Project agents                                                                                                                                                              
+    ml-experiment-implementer · sonnet · project memory                                                                                                                         
+                                                                                                                                                                                
+    Built-in agents (always available)                                                                                                                                          
+    claude-code-guide · haiku                                                                                                                                                   
+    Explore · haiku                                                                                                                                                             
+    general-purpose · inherit
+    Plan · inherit                                                                                                                                                              
+    statusline-setup · sonnet                                                                                                                                                   
+                                                                                                                                                                                
+                                                                                                                                                                                
+  ←/→ switch tabs · ↑↓ navigate · Enter select · Esc close  
+```
+
+```
+機械学習の実験結果を分析する専門エージェント．
+以下の役割を担う：
+- experiments/exp_NNN/results/ 以下の実験結果ファイルを読み込む
+- 精度・損失・学習曲線などの結果を定量的に分析する
+- ベースラインとの比較を行う
+- 改善案を3〜5個提案する
+- 分析レポートをメインエージェントに返す
+
+使用ツール：Read, Glob, Grep
+```
+
 
 ## ステップ5.3：Claude Code Agent Teams の導入
 
