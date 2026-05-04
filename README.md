@@ -33,4 +33,4 @@ MCPサーバーを導入予定．
 
 ## [ステップ4：Codex CLI のインストール・動作確認](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step4)
 
-## [ステップ5：Claude Code CLI × Codex CLI](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step5)
+## [ステップ5：Claude Code CLI × Codex CLI の前準備](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step5)
