@@ -97,6 +97,25 @@ ChatGPT Plusに登録しているので，`1`を選択して先に進みます�
 ```
 上記画面の`› Find and fix a bug in @filename`とある部分がチャット欄です．
 試しに`CLAUDE.mdを読んで，このプロジェクトの概要を説明してください．`と入力して，Claude Codeで行なったABNのプロジェクトを共有可能か確かめます．
+（追記：2025/5/4）
+```
+╭───────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.128.0)            │
+│                                       │
+│ model:     gpt-5.5   /model to change │
+│ directory: ~/research/project1        │
+╰───────────────────────────────────────╯
+
+  Tip: GPT-5.5 is now available in Codex. It's our strongest agentic coding model yet, built to reason through large codebases,
+  check assumptions with tools, and keep going until the work is done.
+
+  Learn more: https://openai.com/index/introducing-gpt-5-5/
+
+ 
+› CLAUDE.mdを読んで，このプロジェクトの概要を説明してください．
+ 
+  gpt-5.5 default · ~/research/project1
+```
 以下のような確認画面がでるので，Claude Codeと同様に許可をして処理を実行させます．その後もファイルの読み取り許可なども求められると思いますが，基本的に許可を出して進めいきます．
 ```
  
