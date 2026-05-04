@@ -139,8 +139,152 @@ Claude Code CLIのチャット欄に以下を入力して実行してくださ�
    ↑↓ to navigate · Enter to select · Esc to go back    
 ```
 今回は`1. Generate with Claude (recommended)`を選択して`Enter`を押します．
+そうすると，プロンプトの入力が求められると思います．
+ここで入力したプロンプトをもとにサブエージェントを定義するYAMLファイルが自動で生成されます．
+今回は以下の通りにプロンプトを入力しました．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
 
+  Opus 4.7 xhigh is now available! · /model to switch
 
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Describe what this agent should do and when it should be used (be comprehensive for best results)                           
+                                                                                                                              
+  Please describe what the agent should do                                                                                    
+                                                                                                                              
+  機械学習の実験コードを実装する専門エージェント．                                                                                
+  以下の役割を担う：                                                                                                              
+  - design.mdを最初に読み込んで，実装方針を把握する           
+  - experiments/exp_NNN/run.py を実装する                                                                                         
+  - 実装後にdocker exec research-dev python -m py_compile で構文チェックを行う                                                    
+  - エラーが発生した場合は自律的に修正する                                                                                        
+  - 完了後、実装内容の概要をメインエージェントに報告する                                                                          
+                                                                                                                                  
+  コーディング規約：                                                                                                              
+  - Pythonは4スペースインデント                                                                                                   
+  - ハイパーパラメータはファイル冒頭に大文字定数でまとめる                                                                        
+  - 関数名・変数名はsnake_case、クラス名はPascalCase                                                                              
+                                                                                                                                  
+  使用ツール：Read, Write, Edit, Bash, Glob, Grep                                                                                 
+                                                                                                                                  
+   Enter to submit · ctrl+g to open in editor · Esc to go back
+```
+プロンプトを入力して`Enter`を押すと以下のような画面が現れます．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Select tools                                                                                                                
+                                                                                                                              
+                                                                                                                              
+    [ Continue ]                                                                                                              
+  ────────────────────────────────────────                                                                                        
+    ☐ All tools                                                                                                                   
+    ☒ Read-only tools                                                                                                             
+    ☒ Edit tools                                                                                                                  
+  ❯ ☒ Execution tools                                                                                                             
+    ☐ MCP tools                                                                                                                   
+    ☐ Other tools                                                                                                                 
+  ────────────────────────────────────────                                                                                        
+    [ Show advanced options ]                                                                                                     
+                                                                                                                                  
+  8 of 43 tools selected                                                                                                          
+                                                                                                                                  
+   Enter to toggle selection · ↑↓ to navigate · Esc to go back   
+```
+ここでは，サブエージェントに与える権限を指定します．
+`上下キー`で移動，`Enter`でチェックの付け外しができます．
+上記画面の通り権限を付与して，`Continue`で`Enter`を押します．
+続いて，以下のような画面が現れます．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Select model                                                                                                                
+                                                                                                                              
+  Model determines the agent's reasoning capabilities and speed.                                                              
+                                                                                                                              
+  ❯ 1. Sonnet ✔             Balanced performance - best for most agents                                                           
+    2. Opus                 Most capable for complex reasoning tasks                                                              
+    3. Haiku                Fast and efficient for simple tasks                                                                   
+    4. Inherit from parent  Use the same model as the main conversation                                                           
+                                                                                                                                  
+   ↑↓ to navigate · Enter to select · Esc to go back
+```
+ここでは，このサブエージェントで使用するモデルを選択します．
+今回は`Sonnet`を選択して`Enter`を押します．
+続いて以下のような画面が現れます．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Choose background color                                                                                                     
+                                                                                                                              
+  ❯ Automatic color                                                                                                           
+      Red                                                                                                                     
+      Blue                                                                                                                        
+      Green                                                                                                                       
+      Yellow                                                                                                                      
+      Purple                                                                                                                      
+      Orange                                                                                                                      
+      Pink                                                                                                                        
+      Cyan                                                                                                                        
+                                                                                                                                  
+                                                                                                                                  
+  Preview:  @ml-experiment-implementer                                                                                            
+                                                                                                                                  
+   ↑↓ to navigate · Enter to select · Esc to go back  
+```
+ここでは，サブエージェントの背景色を選択します．
+機能そのものに影響しないので好きな色を選択してください．
+今回は`Automatic color`を選択します．
+続いて，以下のような画面が現れます．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Configure agent memory                                                                                                      
+                                                                                                                              
+  ❯ 1. Project scope (.claude/agent-memory/) (Recommended)                                                                    
+    2. None (no persistent memory)                                                                                            
+    3. User scope (~/.claude/agent-memory/)                                                                                       
+    4. Local scope (.claude/agent-memory-local/)                                                                                  
+                                                                                                                                  
+   ↑↓ to navigate · Enter to select · Esc to go back 
+```
 
 
 ## ステップ5.3：Claude Code Agent Teams の導入
