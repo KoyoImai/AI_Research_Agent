@@ -295,7 +295,7 @@ Claude Code CLIのチャット欄に以下を入力して実行してくださ�
 
 今回は，`project1/.claude/agents/implementer.md`が作成されました．
 ファイル名が長い場合や内容がおかしい場合は，手動で修正して大丈夫です，
-今回生成された`implementer.md`はこのgithubディレクトリに置いておきます．
+今回生成された`implementer.md`はこの[githubディレクトリ](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step5/implementer.md?plain=1)に置いておきます．
 
 
 
