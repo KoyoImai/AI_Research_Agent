@@ -57,6 +57,8 @@ Agent Teamsとは，複数の独立したClaude Codeインスタンスをチー�
 ```
 mkdir -p ./.claude/agents
 ```
+
+### implementerエージェント
 続いて，`/agents`コマンドを使用してサブエージェントを作成していきます．
 Claude Code CLIのチャット欄に以下を入力して実行してください．
 ```
@@ -290,6 +292,11 @@ Claude Code CLIのチャット欄に以下を入力して実行してくださ�
 これで，今回のプロジェクト内で実験の記録と管理がしやすくなります．
 次の画面に移ったら`s`を押してサブエージェントのファイルを保存してください．
 `project1/.claude/agents`にサブエージェントの設定が記述された`.md`ファイルが保存されていると思います．
+
+今回は，`project1/.claude/agents/implementer.md`が作成されました．
+ファイル名が長い場合や内容がおかしい場合は，手動で修正して大丈夫です，
+今回生成された`implementer.md`はこのgithubディレクトリに置いておきます．
+
 
 
 ## ステップ5.3：Claude Code Agent Teams の導入
