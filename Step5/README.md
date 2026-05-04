@@ -335,7 +335,8 @@ implementerエージェントと同様にまず以下を実行してください
                                                                                                                                                                                 
   ←/→ switch tabs · ↑↓ navigate · Enter select · Esc close  
 ```
-
+以降もimplementerエージェントと同様に，`1. Project (.claude/agents/)`，`1. Generate with Claude (recommended)`を順番に選択して`Enter`を押してください．
+その後，どのようなエージェントを作成するかプロンプトを入力するので，以下の内容でエージェントを作成します．
 ```
 機械学習の実験結果を分析する専門エージェント．
 以下の役割を担う：
@@ -347,9 +348,17 @@ implementerエージェントと同様にまず以下を実行してください
 
 使用ツール：Read, Glob, Grep
 ```
+続いてエージェントに与える権限を聞かれます．
+`Read-only tools`と`Edit tools`に権限を与えます．
+モデルは`sonner`とし，色は`Automatic color`とします．
+最後に`1. Project scope (.claude/agent-memory/) (Recommended)`を選択後，`s`を押して一旦完了です．
 
 
-## ステップ5.3：Claude Code Agent Teams の導入
+## ステップ5.3：Claude Code サブエージェントの動作確認
+
+
+
+## ステップ5.4：Claude Code Agent Teams の導入
 
 
 
