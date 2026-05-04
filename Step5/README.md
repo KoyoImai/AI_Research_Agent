@@ -97,7 +97,49 @@ Claude Code CLIのチャット欄に以下を入力して実行してくださ�
   ←/→ switch tabs · ↑↓ navigate · Enter select · Esc close 
 ```
 `Agents`，`Running`，`Library`という3つのタブが上段にあると思います．
-`←/→`でタブを移動できるので，`Library`へ移動し，`Create new agent`を選択して`Enter`を押してください．
+`←/→`キーでタブを移動できるので，`Library`へ移動し，`Create new agent`を選択して`Enter`を押してください．
+そうすると以下のような画面に移ります．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Choose location                                                                                                             
+                                                                                                                              
+  ❯ 1. Project (.claude/agents/)                                                                                              
+    2. Personal (~/.claude/agents/)                                                                                           
+                                                                                                                                  
+   ↑↓ to navigate · Enter to select · Esc to cancel         
+```
+上記の画面では，サブエージェントの保存先を聞かれているので，今回は`1. Project (.claude/agents/)`を選択し`Enter`を押します．
+`1. Project (.claude/agents/)`を指定した場合，作成するサブエージェントは起動中のプロジェクト内でのみ有効になります．
+続いて以下のような画面に移ります．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
+
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Create new agent                                                                                                              
+  Creation method                                                                                                             
+                                                                                                                              
+  ❯ 1. Generate with Claude (recommended)                                                                                     
+    2. Manual configuration                                                                                                   
+                                                                                                                                  
+   ↑↓ to navigate · Enter to select · Esc to go back    
+```
+今回は`1. Generate with Claude (recommended)`を選択して`Enter`を押します．
+
 
 
 
