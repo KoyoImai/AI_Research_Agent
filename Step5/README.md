@@ -52,7 +52,52 @@ Agent Teamsとは，複数の独立したClaude Codeインスタンスをチー�
 
 ## ステップ5.2：Claude Code サブエージェントの導入
 ここからは実際にClaude Codeでサブエージェントを導入して動作確認を行います．
+サブエージェントは，`.claude/agents/`に保存されます．
+以下のコマンドでディレクトリを作成します．
+```
+mkdir -p ./.claude/agents
+```
+続いて，`/agents`コマンドを使用してサブエージェントを作成していきます．
+Claude Code CLIのチャット欄に以下を入力して実行してください．
+```
+/agents
+```
+上記コマンドを実行すると，以下のような画面になります．
+```
+ ▐▛███▜▌   Claude Code v2.1.126
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
 
+  Opus 4.7 xhigh is now available! · /model to switch
+
+❯ /agents                                                                                                                         
+                             
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Agents  Running   Library                                                                                                     
+                                                                                                                              
+    Create new agent                                                                                                          
+                                                                                                                              
+  No agents found. Create specialized subagents that Claude can delegate to.                                                  
+                                                                                                                                  
+  Each subagent has its own context window, custom system prompt, and specific tools.                                             
+                                                                                                                                  
+  Try creating: Code Reviewer, Code Simplifier, Security Reviewer, Tech Lead, or UX Reviewer.                                     
+                                                                                                                                  
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+  ────                                                                                                                            
+                                                                                                                                  
+    Built-in (always available):                                                                                                  
+    claude-code-guide · haiku                                                                                                     
+    Explore · haiku                                                                                                               
+    general-purpose · inherit                                                                                                     
+    Plan · inherit                                                                                                                
+    statusline-setup · sonnet                                                                                                     
+                                                                                                                                  
+                                                                                                                                  
+  ←/→ switch tabs · ↑↓ navigate · Enter select · Esc close 
+```
+`Agents`，`Running`，`Library`という3つのタブが上段にあると思います．
+`←/→`でタブを移動できるので，`Library`へ移動し，`Create new agent`を選択して`Enter`を押してください．
 
 
 
