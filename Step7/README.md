@@ -12,6 +12,7 @@ Anthropicや開発者コミュニティが公開しているMCPサーバーを�
 
 ## MCPサーバー1：Filesystem MCP
 まず，Filesystem MCPサーバーの導入から始めます．
+Filesystem MCPは，ローカルに存在するファイルを操作するためのサーバーです（?）．
 ターミナル上で以下のコマンドを実行し，Filesystem MCPサーバーのパッケージをインストールします（Claude Code上ではないです）．
 ```
 npm install -g @modelcontextprotocol/server-filesystem
