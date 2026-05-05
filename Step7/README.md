@@ -46,4 +46,16 @@ claude mcp add --scope user filesystem mcp-server-filesystem /home/mprg/research
 その後，`filesystem MCPを使用して，/home/mprg/research/project1/の中にあるファイル一覧を表示してください．`とチャット欄に入力して動作を確認してみてください．
 
 ## MCPサーバー2：arXiv MCP
+arXiv MCP サーバーを導入します．
+以下のコマンドを実行して必要なパッケージをインストールしてください．
+```
+npm install -g @cyanheads/arxiv-mcp-server
+```
+インストールが完了したら，Claude Codeに登録を行います．
+以下のコマンドを実行してください．
+```
+claude mcp add --scope user arxiv arxiv-mcp-server
+```
+
+
 
