@@ -14,9 +14,11 @@ Anthropicや開発者コミュニティが公開しているMCPサーバーを�
 まず，Filesystem MCPサーバーの導入から始めます．
 ターミナル上で以下のコマンドを実行し，Filesystem MCPサーバーのパッケージをインストールします（Claude Code上ではないです）．
 ```
-
+npm install -g @modelcontextprotocol/server-filesystem
 ```
-
+```
+claude mcp add --scope user filesystem mcp-server-filesystem /home/mprg/research
+```
 
 
 
