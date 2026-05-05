@@ -1,4 +1,4 @@
-# ステップ5：Claude Code CLI × Codex CLI の前準備
+# ステップ5：Claude Code CLI のサブエージェント
 Claude Code CLI × Codex CLI による研究環境を構築するため，サブエージェントなどについてまとめます．
 Claude Code CLI × Codex CLI で研究を進めるため，一度ABNのプロジェクトをバックアップだけとって削除しました．
 
