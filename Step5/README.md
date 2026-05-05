@@ -352,7 +352,7 @@ implementerエージェントと同様にまず以下を実行してください
 `Read-only tools`と`Edit tools`に権限を与えます．
 モデルは`sonner`とし，色は`Automatic color`とします．
 最後に`1. Project scope (.claude/agent-memory/) (Recommended)`を選択後，`s`を押して一旦完了です．
-
+今回作成した`analyzer.md`はこの[githubディレクトリ](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step5/analyzer.md?plain=1)に置いておきます．
 
 ## ステップ5.3：Claude Code サブエージェントの動作確認
 
