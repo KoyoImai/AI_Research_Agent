@@ -80,3 +80,9 @@ Agent Teamsのテストをしたいです．
 Claude Codeの画面が3つ開かれたような画面になっていると思います．
 ここでは，各画面のことをペインと呼びます．
 ペインの移動はVS Code上（tmux上？）では，`ctrl + b`を押した後に矢印キーを押すことで可能です．
+左のペインがメインとなるTeam Lead，右側のペインはツームメンバーのセッションになります．
+基本的には，左のペインとのみやりとりを行います．
+一旦，左のマインペインに移動して，Agent Teamsを終了します．
+`Agent Teamsを終了してください．`とメインペインのチャット欄に入力してください．
+
+![](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step6/images/AgentTeams%E7%B5%82%E4%BA%86.png)
