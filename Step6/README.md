@@ -48,3 +48,16 @@ Agent Teamsとは，複数の独立したClaude Codeインスタンスをチー�
 
 最終的には，Agent Teamsの複数のチームメイトが，それぞれ内部でサブエージェントを起動するみたいな構成になるのかなと考えています．
 
+
+## ステップ6.2：Agent Teamsの有効化
+Agent Teamsは，デフォルトで無効になっています．
+まず，Agent Teamsを有効にするため，`~/.claude/settings.json`を開いて内容を編集します．
+以下が私の環境における`~/.claude/settings.json`です．
+```
+{
+  "theme": "dark",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+```
