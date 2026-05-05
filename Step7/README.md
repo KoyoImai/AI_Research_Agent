@@ -56,6 +56,13 @@ npm install -g @cyanheads/arxiv-mcp-server
 ```
 claude mcp add --scope user arxiv arxiv-mcp-server
 ```
+これで登録が完了しました．
+Claude Codeを起動して`/mcp`コマンドで登録ができているかを確かめてみてください．
+その後`arXiv MCPを使用して，Attention Branch Networkに関する論文を3件検索してください．`のようなプロンプトを入力して動作を確認してみてください．
+
+（5/5時点だと，アクセス制限が出てarXiv MCPサーバーが使えないみたいです．．．）
+
+
 
 
 
