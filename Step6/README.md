@@ -86,3 +86,12 @@ Claude Codeの画面が3つ開かれたような画面になっていると思�
 `Agent Teamsを終了してください．`とメインペインのチャット欄に入力してください．
 
 ![](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step6/images/AgentTeams%E7%B5%82%E4%BA%86.png)
+
+Agent Teamsが終了したら，開いていた複数のペインは閉じられ，元の1画面状態に戻ります．
+ここまでで，Agent Teamsの有効化は終わりです．
+次からは実際にAgent Teamsを使用して，研究用のAgent Teamsの構築を行います．
+
+
+## ステップ6.3：研究用Agent Teamsの構築
+
+
