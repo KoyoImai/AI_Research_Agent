@@ -46,7 +46,7 @@ MCPサーバーを導入予定．
 
 ## [ステップ5：Claude Code CLI のサブエージェント](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step5)
 
-## [ステップ5：Claude Code CLI の Agent Teams](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step6)
+## [ステップ６：Claude Code CLI の Agent Teams](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step6)
 
 
 ## [ステップXX：MCPサーバーの導入](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step6)
