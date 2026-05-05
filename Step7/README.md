@@ -19,6 +19,28 @@ npm install -g @modelcontextprotocol/server-filesystem
 ```
 claude mcp add --scope user filesystem mcp-server-filesystem /home/mprg/research
 ```
+導入が完了したら，Claude Codeを起動してFilesystem MCPが導入できているかを確認します．
+```
+ ▐▛███▜▌   Claude Code v2.1.128
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    ~/research/project1
 
+❯ /mcp                                                                                                                            
+                                                                                                                                  
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Manage MCP servers                                                                                                              
+  4 servers                                                                                                                       
+                                                                                                                                  
+    User MCPs (/home/mprg/.claude.json)                                                                                           
+  ❯ filesystem · ✔ connected · 14 tools                                                                                           
+                                                                                                                                  
+    claude.ai
+    claude.ai Gmail · △ needs authentication
+    claude.ai Google Calendar · △ needs authentication
+    claude.ai Google Drive · △ needs authentication
+
+  https://code.claude.com/docs/en/mcp for help
+ ↑↓ to navigate · Enter to confirm · Esc to cancel
+```
 
 
