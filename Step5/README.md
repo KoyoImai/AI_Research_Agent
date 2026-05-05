@@ -355,7 +355,19 @@ implementerエージェントと同様にまず以下を実行してください
 今回作成した`analyzer.md`はこの[githubディレクトリ](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step5/analyzer.md?plain=1)に置いておきます．
 
 ## ステップ5.3：Claude Code サブエージェントの動作確認
-
+好きに動かしてみて下さい．
+サブエージェントの使用は，メインエージェントが自動で使用してくれる場合もあるみたいですが，今回は手動でサブエージェントの使用を要求します．
+サブエージェントの使用は，プロンプト中に`implementer（サブエージェント名）を使用して・・・`みたいな内容を混ぜればいいのだと思います．
+```
+@ml-experiment-implementer experiments/exp_001/design.mdに基づいてrun.pyを実装してください
+```
+上記のように入力すると，今回用意した`implementer`サブエージェントが`design.md`に基づいて実装を進めてくれると思います．
+design.mdはABNの使い回しでも，新しい実験でも構いません．
+実装後，学習が完了したら，`analyzer`サブエージェントを使用して分析をしてみてください．
+以下のように入力すればできると思います．
+```
+@ml-experiment-analyzer experiments/exp_001の実験結果を分析してください
+```
 
 
 ## ステップ5.4：Claude Code Agent Teams の導入
