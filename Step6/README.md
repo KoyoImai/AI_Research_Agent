@@ -73,6 +73,10 @@ Agent Teamsのテストをしたいです．
 
 モデルはいずれもSonnetを使用してください．
 ```
-入力後`Enter`を押すと以下のような画面へと変化していきます．（見辛かったのでスクショしました．）
+入力後`Enter`を押すと以下のような画面へと変化していきます．（見辛かったのでスクショしましたものを貼り付けています．）
 
 ![](https://github.com/KoyoImai/AI_Research_Agent/blob/main/Step6/images/AgentTeams%E8%B5%B7%E5%8B%95.png)
+
+Claude Codeの画面が3つ開かれたような画面になっていると思います．
+ここでは，各画面のことをペインと呼びます．
+ペインの移動はVS Code上（tmux上？）では，`ctrl + b`を押した後に矢印キーを押すことで可能です．
