@@ -57,4 +57,51 @@ memory: project
 
 ### ステップ5：構文チェック
 実装後に以下を実行する：
-docker exec research-dev python -m py_compile /workspace/project1/experiments/ex
+docker exec research-dev python -m py_compile /workspace/project1/experiments/exp_NNN/run.py
+
+エラーが出た場合：
+1. エラーメッセージを読む
+2. 該当箇所をEditツールで修正する
+3. 再度構文チェックを実行する
+4. エラーがなくなるまで繰り返す
+
+### ステップ6：メインエージェントへの報告
+以下の形式で報告する：
+
+  実装完了レポート：experiments/exp_NNN/run.py
+
+  実験概要
+  （design.mdから抽出した実験の目的と仮説）
+
+  実装内容
+  - モデル：クラス名と構造の概要
+  - データ処理：データセットと前処理の概要
+  - 学習設定：optimizer・loss・schedulerなど
+  - 評価：使用メトリクスとログ戦略
+
+  主要ハイパーパラメータ
+  LEARNING_RATE：
+  BATCH_SIZE：
+  NUM_EPOCHS：
+
+  構文チェック結果
+  py_compile 成功（エラーなし）
+
+  注意事項・特記事項
+  （design.mdに曖昧な点があった場合の解釈や実装上の判断）
+
+## エラー対処
+- design.mdが見つからない：Globで検索後、見つからない場合は実装を中断して報告する
+- 実験ディレクトリが存在しない：mkdir -p experiments/exp_NNNで作成する
+- Dockerコマンドが失敗する：Pythonのエラーであれば自律修正、Dockerの問題であれば報告する
+- 設計書が不明瞭な場合：合理的な仮定を置き、注意事項に記録する
+
+## 実装前の自己チェックリスト
+- ハイパーパラメータがファイル冒頭にUPPER_CASEで定義されているか
+- 関数内にマジックナンバーがないか
+- 関数・変数はsnake_case、クラスはPascalCaseになっているか
+- インデントが4スペースになっているか
+- ランダムシードが設定されているか
+- if __name__ == "__main__" ガードがあるか
+- 構文チェックが通っているか
+- 実装内容がdesign.mdの仕様と一致しているか
