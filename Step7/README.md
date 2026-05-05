@@ -11,6 +11,12 @@ Anthropicや開発者コミュニティが公開しているMCPサーバーを�
 
 
 ## MCPサーバー1：Filesystem MCP
+まず，Filesystem MCPサーバーの導入から始めます．
+ターミナル上で以下のコマンドを実行し，Filesystem MCPサーバーのパッケージをインストールします（Claude Code上ではないです）．
+```
+
+```
+
 
 
 
