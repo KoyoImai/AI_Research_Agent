@@ -64,5 +64,10 @@ Claude Codeを起動して`/mcp`コマンドで登録ができているかを確
 
 
 
+## MCPサーバー3：Codex MCP
+Codexはステップ4ですでにインストール済みなので，以下のコマンドを実行してMCPとして登録してください．
+```
+claude mcp add --scope user codex codex mcp
+```
 
 
