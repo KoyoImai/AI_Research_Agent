@@ -42,5 +42,7 @@ claude mcp add --scope user filesystem mcp-server-filesystem /home/mprg/research
   https://code.claude.com/docs/en/mcp for help
  ↑↓ to navigate · Enter to confirm · Esc to cancel
 ```
+その後，`filesystem MCPを使用して，/home/mprg/research/project1/の中にあるファイル一覧を表示してください．`とチャット欄に入力して動作を確認してみてください．
 
+## MCPサーバー2：arXiv MCP
 
