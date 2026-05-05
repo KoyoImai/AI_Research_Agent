@@ -93,5 +93,18 @@ Agent Teamsが終了したら，開いていた複数のペインは閉じられ
 
 
 ## ステップ6.3：研究用Agent Teamsの構築
+Claude Codeを起動したら，チャット欄に以下の内容を入力してください．
+今回は，前回作成したサブエージェントを使用してメンバーを構築していますが，特に縛りはありません．
+チームメンバーは自由に決めてみてください．
+```
+研究用のAgent Teamを作成してください．
+チームメンバーは以下の2名です：
+- @ml-experiment-implementer：experiments/exp_001/design.mdを読んでrun.pyを実装する担当
+- @ml-experiment-analyzer：実装・学習完了後にexperiments/exp_001/の結果を分析して改善案を提案する担当
 
+モデルはいずれもSonnetを使用してください．
+まず@ml-experiment-implementerがdesign.mdを読んで実装を開始し，
+実装完了後に@ml-experiment-analyzerへ直接連絡して分析を開始するようにしてください．
+```
+Agent Teamsが起動したら，メインペインと会話しながら自由に動作させてみてください．
 
