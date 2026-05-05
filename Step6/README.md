@@ -61,3 +61,4 @@ Agent Teamsは，デフォルトで無効になっています．
   }
 }
 ```
+`"env"`セクションの`"CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS"`が`"1"`になっていればAgent Teamsが有効です．
