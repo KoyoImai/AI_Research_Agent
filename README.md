@@ -17,6 +17,9 @@
        └── @ml-experiment-analyzer を呼び出す
 ```
 
+### 構成N：Agemt Teamsによる複数Agentの研究議論
+現状の最終目標
+
 ## 現状の疑問
 ### 疑問1
 VS Codeの拡張機能にあるClaude CodeやCodexを使うのは可能なのか？
