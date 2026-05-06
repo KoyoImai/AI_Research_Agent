@@ -253,7 +253,14 @@ Tips for getting started:
  ~/research/project1                            no sandbox                        Auto (Gemini 3)                         0% used
 
 ```
+`/quit`とチャット欄に入力してGemini CLIを終了してください．
 
+続いて，Gemini CLI をMCPサーバーとして登録していきます．
+以下のコマンドを実行してください．
+```
+npm install -g mcp-gemini-cli
+claude mcp add --scope user gemini-cli -- mcp-gemini-cli --allow-npx
+```
 
 
 
