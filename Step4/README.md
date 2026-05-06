@@ -268,7 +268,7 @@ CodexとClaude CodeのAgentの協調方法については，今後考えるこ�
 
 
 
-# Gemini CLI のインストール
+## Gemini CLI のインストール
 まず，Gemini CLIをインストールします．
 以下のコマンドを実行してGemini CLIをインストールしてください．
 ```
@@ -450,3 +450,11 @@ Tips for getting started:
 
 ```
 `/quit`とチャット欄に入力してGemini CLIを終了してください．
+
+
+次に以下のコマンドを実行してください．
+問題なくバージョンが出れば問題ありません．
+```
+npm install -g @google/gemini-cli
+gemini --version
+```
