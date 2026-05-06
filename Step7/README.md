@@ -10,6 +10,7 @@ Anthropicや開発者コミュニティが公開しているMCPサーバーを�
 以下では，MCPサーバーの導入とその使用方法についてまとめていきます．
 
 
+
 ## MCPサーバー1：Filesystem MCP
 まず，Filesystem MCPサーバーの導入から始めます．
 Filesystem MCPは，ローカルに存在するファイルを操作するためのサーバーです（?）．
@@ -81,5 +82,23 @@ claude mcp add --scope user gemini-cli -- mcp-gemini-cli --allow-npx
 ```
 
 
+
+## MCPサーバー5：Memory MCP
+Memory MCPを導入します．
+以下のコマンドを実行してください．
+```
+npm install -g @modelcontextprotocol/server-memory
+mkdir -p ~/.claude/memory
+claude mcp add --scope user memory mcp-server-memory -e MEMORY_FILE_PATH=/home/mprg/.claude/memory/memory.jsonl
+```
+Claude Codeを起動して以下の内容をチャット欄に入力してください．
+```
+Memory MCPを使用して，exp_001の情報を記憶してください：                                                                         
+  - モデル：SimpleCNN                                                                                                             
+  - val_acc：69.30%                                                                                                               
+  - 課題：過学習（train-val gap 12.14%）
+```
+会話が終了したら，`/exit`を押してClaude Codeを終了してください．
+Claude Codeを終了後，`cat ~/.claude/memory/memory.jsonl`で記憶状態を確認してください．
 
 
