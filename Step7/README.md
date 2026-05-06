@@ -85,6 +85,9 @@ claude mcp add --scope user gemini-cli -- mcp-gemini-cli --allow-npx
 
 ## MCPサーバー5：Memory MCP
 Memory MCPを導入します．
+通常Claude Codeは，セッションを`/exit`で抜けた場合，それまでのコンテキスト（会話履歴・実験内容）は消えます．
+そのため，新しいセッションを起動した場合，実験に関する記憶はゼロから始まります．
+Memory MCPを導入することで，セッション間で記憶を共有可能にします．
 以下のコマンドを実行してください．
 ```
 npm install -g @modelcontextprotocol/server-memory
