@@ -173,6 +173,7 @@ Atention Branch Network（ABN）をベースとして，「仮説→実装・実
 ### ステップ3.5：ABN論文での検証実験
 実際にABNの論文pdfをAgentに渡して検証実験を行います．
 まず，`/home/mprg/research/project1/papers`にABNの論文pdfを配置します．
+`papers/abn.pdf`と今井はおきました．
 ABNのpdfを配置したら，Claude Codeのチャット画面で`/implement papers/abn.pdf`を実行してください．
 以下のような画面になると思います（これは処理途中の画面です）．
 ```
