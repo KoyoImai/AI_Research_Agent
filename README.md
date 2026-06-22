@@ -36,6 +36,7 @@
 
 ## [ステップ7：MCPサーバーの導入](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step7)
 
+## [ステップ8：DGX Spark２台接続での運用](https://github.com/KoyoImai/AI_Research_Agent/tree/main/Step8)
 
 
 
